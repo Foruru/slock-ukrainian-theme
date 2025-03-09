@@ -1,0 +1,31 @@
+From 0029c29c4273c1d3ba1e9fbf8d301e4ed77f90a0 Mon Sep 17 00:00:00 2001
+From: Foruru <dfgdgf278@gmail.com>
+Date: Sun, 9 Mar 2025 15:45:53 +0200
+Subject: [PATCH] Adds a theme with the colors of the Ukrainian flag.
+
+---
+ config.h | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 config.h
+
+diff --git a/config.h b/config.h
+new file mode 100644
+index 0000000..1439b5f
+--- /dev/null
++++ b/config.h
+@@ -0,0 +1,12 @@
++/* user and group to drop privileges to */
++static const char *user  = "nobody";
++static const char *group = "nogroup";
++
++static const char *colorname[NUMCOLS] = {
++	[INIT] =   "black",     /* after initialization */
++	[INPUT] =  "#0057B7",   /* during input */
++	[FAILED] = "#FFD700",   /* wrong password */
++};
++
++/* treat a cleared input like a wrong password (color) */
++static const int failonclear = 1;
+-- 
+2.47.0
+
